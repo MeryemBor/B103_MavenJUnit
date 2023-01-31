@@ -1,0 +1,4 @@
+23:16:41.744 [main] INFO  day18.C02_Log4J - Info logger
+23:16:41.760 [main] WARN  day18.C02_Log4J - Warn logger
+23:16:41.761 [main] ERROR day18.C02_Log4J - Error logger
+23:16:41.761 [main] FATAL day18.C02_Log4J - Fatal logge
