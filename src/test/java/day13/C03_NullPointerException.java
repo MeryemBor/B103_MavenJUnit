@@ -6,7 +6,7 @@ public class C03_NullPointerException {
     WebDriver driver;
     Faker faker;
     @Test
-    public void nullPointerExceptionTest(){
+    public  void nullPointerExceptionTest(){
         driver.get("https://www.techproeducation.com");//java.lang.NullPointerException
     }
     @Test
