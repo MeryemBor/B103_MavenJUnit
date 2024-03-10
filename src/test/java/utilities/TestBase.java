@@ -72,7 +72,7 @@ public abstract class TestBase {
     public void tearDown() {
         waitFor(5);
         // driver.quit();
-        extentReports.flush();
+      //  extentReports.flush();
     }
 
     //    MULTIPLE WINDOW:
@@ -184,7 +184,7 @@ public abstract class TestBase {
         return wait.until(ExpectedConditions.elementToBeClickable(locator));
     }
 
-    //COK KULLANILMAZ.
+    //COK KULLANILMAZ. //Hard wait with loop making it rather dynamic than usual.
     public static void clickWithTimeOut(WebElement element, int timeout) {
         for (int i = 0; i < timeout; i++) {
             try {
@@ -214,7 +214,7 @@ public abstract class TestBase {
     }
 
     //======Fluent Wait====
-    // params : xpath of teh element , max timeout in seconds, polling in second
+    // params : xpath of web element , max timeout in seconds, polling in second
     public static WebElement fluentWait(String xpath, int withTimeout, int pollingEvery) {
         FluentWait<WebDriver> wait = new FluentWait<WebDriver>(driver)
                 .withTimeout(Duration.ofSeconds(withTimeout))//Wait 3 second each time
@@ -223,6 +223,9 @@ public abstract class TestBase {
                 .ignoring(NoSuchElementException.class);
         WebElement element = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(xpath)));
         return element;
+
+        //Murat hocanin yukardaki yorumu da boyle:
+        // @params: String xPath of web element, int total time of wait, int polling every period
     }
 
     //*****************************************************

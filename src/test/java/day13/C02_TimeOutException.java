@@ -8,7 +8,7 @@ import utilities.TestBase;
 import java.time.Duration;
 public class C02_TimeOutException extends TestBase {
     /*
-    TimeOutException explicit wait kullandimda ve locator bulunamadiginda alirim
+    TimeOutException explicit wait kullandigimda ve locator bulunamadiginda alirim
      */
     @Test
     public void timeOutExceptionTest(){
